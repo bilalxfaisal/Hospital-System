@@ -16,7 +16,7 @@ function navActive($file) {
 <body>
 
 <nav class="topnav">
-  <div class="brand"><span>IVOR PAINE MEMORIAL HOSPITAL</span></div>
+  <div class="brand">IVOR PAINE <span>MEMORIAL</span> HOSPITAL</div>
   <a href="index.php"              class="<?= navActive('index.php') ?>">Dashboard</a>
   <a href="patients.php"           class="<?= navActive('patients.php') ?>">Patients</a>
   <a href="doctors.php"            class="<?= navActive('doctors.php') ?>">Doctors</a>

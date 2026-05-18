@@ -117,7 +117,7 @@ include 'nav.php';
   <!-- ── WARD DETAIL ── -->
   <div class="card" style="margin-bottom:22px">
     <div class="card-header">
-      <div class="icon">🏥</div>
+      
       <h2><?= $wardDetail['WardName'] ?> &nbsp;<span class="badge badge-teal"><?= $wardDetail['Specialty'] ?></span></h2>
     </div>
     <div class="card-body">

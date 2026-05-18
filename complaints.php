@@ -74,7 +74,7 @@ include 'nav.php';
 
   <?php if ($action === 'add'): ?>
   <div class="card">
-    <div class="card-header"><div class="icon"></div><h2>Register New Complaint</h2></div>
+    <div class="card-header"><h2>Register New Complaint</h2></div>
     <div class="card-body">
       <form method="POST">
         <input type="hidden" name="_form" value="add_complaint">
@@ -98,7 +98,7 @@ include 'nav.php';
 
   <?php elseif ($action === 'assign'): ?>
   <div class="card">
-    <div class="card-header"><div class="icon"></div><h2>Assign Complaint to Patient</h2></div>
+    <div class="card-header"><h2>Assign Complaint to Patient</h2></div>
     <div class="card-body">
       <form method="POST">
         <input type="hidden" name="_form" value="assign_complaint">

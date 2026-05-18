@@ -50,6 +50,7 @@ while ($row = sqlsrv_fetch_array($activeTxRes, SQLSRV_FETCH_ASSOC)) $activeTx[] 
     <h1>Dashboard</h1>
     <p>Hospital-wide overview — Ivor Paine Memorial Hospital</p>
   </div>
+
   <div class="grid-4" style="margin-bottom:24px">
     <div class="stat-box teal">
       <div class="label">Patients</div>
@@ -76,7 +77,6 @@ while ($row = sqlsrv_fetch_array($activeTxRes, SQLSRV_FETCH_ASSOC)) $activeTx[] 
   <div class="grid-2">
     <div class="card">
       <div class="card-header">
-        
         <h2>Recently Admitted Patients</h2>
       </div>
       <div class="table-wrap">
@@ -122,11 +122,11 @@ while ($row = sqlsrv_fetch_array($activeTxRes, SQLSRV_FETCH_ASSOC)) $activeTx[] 
     <div class="card">
       <div class="card-header"><h2>Quick Actions</h2></div>
       <div class="card-body" style="display:flex;flex-direction:column;gap:10px">
-        <a href="patients.php?action=add"   class="btn btn-teal">+ Add New Patient</a>
-        <a href="doctors.php?action=add"    class="btn btn-primary">+ Add New Doctor</a>
-        <a href="complaints.php?action=assign" class="btn btn-ghost">+ Assign Complaint to Patient</a>
-        <a href="consultants.php?action=add_member" class="btn btn-ghost">+ Add Doctor to Consultant Team</a>
-        <a href="queries.php"               class="btn btn-ghost">View All Reports</a>
+        <a href="patients.php?action=add"          class="btn btn-teal">Add New Patient</a>
+        <a href="doctors.php?action=add"           class="btn btn-primary">Add New Doctor</a>
+        <a href="complaints.php?action=assign"     class="btn btn-ghost">Assign Complaint to Patient</a>
+        <a href="consultants.php?action=add_member" class="btn btn-ghost">Add Doctor to Consultant Team</a>
+        <a href="queries.php"                      class="btn btn-ghost">View All Reports</a>
       </div>
     </div>
 

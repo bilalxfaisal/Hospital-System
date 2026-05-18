@@ -151,7 +151,7 @@ function gradeClass($g) {
   </div>
   <div class="card" style="margin-bottom:22px">
     <div class="card-header">
-      <div class="icon">🩺</div>
+      
       <h2><?= htmlspecialchars($doctorDetail['Name']) ?>
         <span class="badge badge-navy">#<?= $viewId ?></span>
         <?php if ($doctorDetail['IsConsultant']): ?>

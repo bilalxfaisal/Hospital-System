@@ -127,7 +127,7 @@ include 'nav.php';
 
   <?php elseif ($action === 'promote'): ?>
   <div class="card">
-    <div class="card-header"><div class="icon">⬆</div><h2>Promote Doctor to Consultant</h2></div>
+    <div class="card-header"><h2>Promote Doctor to Consultant</h2></div>
     <div class="card-body">
       <form method="POST">
         <input type="hidden" name="_form" value="make_consultant">

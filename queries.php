@@ -272,6 +272,7 @@ include 'nav.php';
       <div class="card">
         <div class="card-body">
           <div class="empty">
+            
             <p>Select a report from the sidebar to view results.</p>
           </div>
         </div>
@@ -282,6 +283,7 @@ include 'nav.php';
       ?>
       <div class="card">
         <div class="card-header">
+          
           <h2><?= str_pad($activeQ,2,'0',STR_PAD_LEFT) ?>. <?= $query['title'] ?></h2>
         </div>
         <div class="card-body">

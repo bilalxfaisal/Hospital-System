@@ -134,14 +134,6 @@ body {
   text-transform: uppercase;
   letter-spacing: .7px;
 }
-.card-header .icon {
-  width: 28px; height: 28px;
-  background: var(--slate);
-  border-radius: 2px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-}
 .card-body { padding: 20px; }
 
 /* ── GRID LAYOUTS ────────────────────────────────────── */
@@ -437,7 +429,6 @@ table.data a:hover { text-decoration: underline; }
   padding: 44px 20px;
   color: var(--muted);
 }
-.empty .icon { font-size: 36px; margin-bottom: 10px; opacity: .6; }
 .empty p { font-size: 13px; font-weight: 300; }
 
 /* ── FOOTER ──────────────────────────────────────────── */

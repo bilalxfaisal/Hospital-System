@@ -69,7 +69,7 @@ include 'nav.php';
   <div class="tabs">
     <a class="tab <?= !$action?'active':'' ?>" href="treatments.php">All Treatments</a>
     <a class="tab <?= $action==='add'?'active':'' ?>" href="treatments.php?action=add">+ Add Treatment</a>
-    <a class="tab <?= $action==='end'?'active':'' ?>" href="treatments.php?action=end">✓ End Active Treatment</a>
+    <a class="tab <?= $action==='end'?'active':'' ?>" href="treatments.php?action=end">End Active Treatment</a>
   </div>
 
   <?php if ($action === 'add'): ?>

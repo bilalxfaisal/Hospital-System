@@ -121,21 +121,18 @@ include 'nav.php';
     <div class="alert alert-<?= $msgType ?>"><?= htmlspecialchars($msg) ?></div>
   <?php endif; ?>
 
-  <!-- ── TABS ── -->
   <div class="tabs">
     <a class="tab <?= (!$action && !$viewId) ? 'active' : '' ?>" href="patients.php">All Patients</a>
-    <a class="tab <?= $action==='add' ? 'active' : '' ?>" href="patients.php?action=add">+ Add Patient</a>
-    <a class="tab <?= $action==='assign' ? 'active' : '' ?>" href="patients.php?action=assign">+ Assign Complaint / Treatment</a>
+    <a class="tab <?= $action==='add' ? 'active' : '' ?>" href="patients.php?action=add">Add Patient</a>
+    <a class="tab <?= $action==='assign' ? 'active' : '' ?>" href="patients.php?action=assign">Assign Complaint / Treatment</a>
   </div>
 
   <?php if ($viewId && $patientDetail): ?>
-  <!-- ── PATIENT DETAIL VIEW ── -->
   <div style="margin-bottom:14px">
-    <a href="patients.php" class="btn btn-ghost btn-sm">← Back to All Patients</a>
+    <a href="patients.php" class="btn btn-ghost btn-sm">&larr; Back to All Patients</a>
   </div>
   <div class="card" style="margin-bottom:22px">
     <div class="card-header">
-      <div class="icon">👤</div>
       <h2><?= htmlspecialchars($patientDetail['PatientName']) ?> &nbsp;<span class="badge badge-navy">#<?= $viewId ?></span></h2>
     </div>
     <div class="card-body">
@@ -161,7 +158,7 @@ include 'nav.php';
         </div>
       </div>
 
-      <div class="section-title">Complaints & Treatments</div>
+      <div class="section-title">Complaints &amp; Treatments</div>
       <?php if (empty($patientTx)): ?>
         <div class="alert alert-info">No complaints or treatments on record for this patient.</div>
       <?php else: ?>
@@ -194,7 +191,6 @@ include 'nav.php';
   </div>
 
   <?php elseif ($action === 'add'): ?>
-  <!-- ── ADD PATIENT FORM ── -->
   <div class="card">
     <div class="card-header"><h2>Register New Patient</h2></div>
     <div class="card-body">
@@ -240,9 +236,8 @@ include 'nav.php';
   </div>
 
   <?php elseif ($action === 'assign'): ?>
-  <!-- ── ASSIGN COMPLAINT / TREATMENT ── -->
   <div class="card">
-    <div class="card-header"><h2>Assign Complaint & Treatment to Patient</h2></div>
+    <div class="card-header"><h2>Assign Complaint &amp; Treatment to Patient</h2></div>
     <div class="card-body">
       <form method="POST">
         <input type="hidden" name="_form" value="assign_complaint">
@@ -292,7 +287,6 @@ include 'nav.php';
   </div>
 
   <?php else: ?>
-  <!-- ── PATIENT LIST ── -->
   <div class="table-wrap">
     <table class="data">
       <thead>
