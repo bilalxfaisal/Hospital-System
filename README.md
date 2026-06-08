@@ -52,7 +52,10 @@ The queries cover:
 - All performance grades per doctor
 
 ---
+## Project Video
+Watch the demo : https://youtu.be/_VOqJecHtso?si=pWdbe_x4EjsNNpG2
 
+---
 ## Tech Stack
 
 - Backend: PHP with the sqlsrv extension
