@@ -53,7 +53,7 @@ The queries cover:
 
 ---
 ## Project Video
-Watch the demo : https://youtu.be/_VOqJecHtso?si=pWdbe_x4EjsNNpG2
+Watch the demo : https://youtu.be/pmVRtYd5EH8
 
 ---
 ## Tech Stack
