@@ -1,107 +1,117 @@
-# Ivor Paine Memorial Hospital — Management System
+<div align="center">
 
-A web-based hospital management system for managing patients, doctors, consultant teams, wards, care units, nurses, complaints, and treatments. Built with PHP and Microsoft SQL Server, with no external frontend frameworks.
+# Ivor Paine Memorial Hospital
+### Hospital Management System
+
+![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-Microsoft-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-2E7D32?style=for-the-badge)
+![Contributors](https://img.shields.io/badge/Contributors-4-0097A7?style=for-the-badge&logo=github&logoColor=white)
+
+*A full-stack web-based hospital management system for managing patients, doctors,*
+*consultant teams, wards, complaints, treatments, and analytical reporting.*
+
+[Features](#features) · [Pages](#pages) · [Reports](#reports) · [Quick Start](#quick-start)
+
+</div>
+
+---
+
+## Overview
+
+**Ivor Paine Memorial Hospital** is a web-based hospital management system built with PHP and Microsoft SQL Server. The system manages the complete operational data of a hospital — patients, doctors, consultants, wards, care units, nurses, complaints, and treatments — through a structured relational database and a clean eight-page web interface.
+
+The dashboard serves as the central hub with live statistics across the entire hospital. Every section handles a dedicated area of operations, from patient admissions to staff management to analytical reporting.
+
+> Built as a team project by 3 contributors as part of a Database Management Systems course at FAST NUCES Islamabad.
+
+---
+
+## Features
+
+### Patient Management
+- Admit patients with bed assignment and care unit placement
+- Full medical profile per patient — complaints, treatments, and history
+- Open and close treatment records with start and end dates
+
+### Doctor and Staff Management
+- Add doctors with position, care unit assignment, and automatic record creation
+- Log previous employment history and periodic performance review grades
+- Consultant promotion with specialty assignment and team management
+
+### Ward Structure
+- Hierarchical view from ward down to care unit, nurses, and patients
+- Nurses categorized by type — DaySister, NightSister, NonReg
+- Each care unit linked to its nurse in charge
+
+### Complaints and Treatments
+- Register complaint and treatment codes with descriptions
+- Assign complaints and treatments to patients with date tracking
+- Close out active treatments with a single form submission
+
+### Analytical Reports
+- 16 pre-built SQL queries covering the full range of hospital data
+- Three parameterized queries accepting live user input — executed safely with bound parameters
+- Results rendered dynamically with column headers extracted from the result set
 
 ---
 
 ## Pages
 
-The application has eight pages accessible through a persistent top navigation bar.
+| Page | Description |
+|------|-------------|
+| Dashboard | Live counts — patients, doctors, consultants, nurses, active treatments, wards |
+| Patients | Admissions, care unit assignment, treatment history |
+| Doctors | Staff records, experience history, performance reviews |
+| Consultants | Specialty assignment, team membership management |
+| Wards | Hierarchical ward and care unit browser |
+| Complaints | Complaint registration and patient assignment |
+| Treatments | Treatment management and discharge |
+| Reports | 16 analytical SQL queries with live input support |
 
-**Dashboard** (index.php)
-The landing page. Shows live counts for patients, doctors, consultants, nurses, active treatments, wards, and care units. Also displays the five most recently admitted patients and the five most recently started ongoing treatments, plus a quick-actions panel with links to common tasks and a summary of all consultant teams and their sizes.
+---
 
-**Patients** (patients.php)
-Admit new patients by assigning them a patient number, name, date of birth, bed number, admission date, and care unit. View a full detail page per patient showing their ward, care unit, attending doctor, and their complete treatment history across all complaints. Assign a complaint and treatment to an existing patient with start and optional end dates.
+## Reports
 
-**Doctors** (doctors.php)
-Add new doctors with name, position, date joined, and care unit assignment. A RECORD entry is automatically created for each new doctor. From each doctor's detail page you can log previous experience entries (employer, role, dates) and add performance review records with a grade. The detail page also shows whether the doctor is a consultant, their specialty if so, and which consultant they report to if not.
-
-**Consultants** (consultants.php)
-Promote an existing doctor to consultant status by assigning a specialty. Add any non-consultant doctor to a consultant's team. The page shows all consultant teams with their members, specialties, and ward assignments.
-
-**Wards** (wards.php)
-Add new wards with a name and specialty. Select any ward from the list to see a full breakdown of its nurses grouped by type (DaySister, NightSister, NonReg), all currently admitted patients with their bed numbers and care unit, and all doctors assigned to care units within that ward.
-
-**Complaints** (complaints.php)
-Register new complaint codes with a description. Assign an existing complaint to a patient alongside a treatment and start date, directly creating a treatment record. Shows all complaints with a count of how many patients have received treatment for each.
-
-**Treatments** (treatments.php)
-Add new treatment codes with a description. View all treatments with a count of total uses. Displays all currently active (ongoing) treatments and provides a form to close out any of them by setting an end date.
-
-**Reports** (queries.php)
-Contains 16 pre-built analytical queries listed in a sidebar. Selecting a query runs it against the live database and displays the results in a table. Three queries accept user input — a doctor number, a patient number, and a complaint code with a date range — and are executed as parameterized queries. The remaining thirteen run immediately on page load.
-
-The queries cover:
+The reports page contains 16 pre-built queries covering:
 
 - Consultants with their full doctor teams
 - Ward structure showing care units and nurses in charge
 - All patients with their complaints, treatments, and dates
 - Junior doctors linked to their patients and care-unit nurses
 - Consultants holding a unique specialty
-- Complaint and treatment records cross-referenced with the in-charge doctor's previous experience
+- Complaint and treatment records cross-referenced with doctor experience
 - Patients with more than one registered complaint
 - Patients grouped by complaint and treatment combination
 - Full performance review history for a specific doctor
 - Complete medical profile for a specific patient
 - Treatments given for a specific complaint within a date range
 - Staff position summary with counts
-- All currently ongoing (undischarged) treatments
+- All currently ongoing treatments
 - Doctors whose care unit has no admitted patients
 - Most common complaints ranked by patient count
 - All performance grades per doctor
 
 ---
-## Project Video
-Watch the demo : https://youtu.be/pmVRtYd5EH8
 
----
-## Tech Stack
+## Quick Start
 
-- Backend: PHP with the sqlsrv extension
-- Database: Microsoft SQL Server (database name: ipmhDB)
-- Frontend: Plain HTML and custom CSS, no external frameworks or libraries
-
----
-
-## Project Structure
-
-```
-hospital_system/
-    index.php          Dashboard with live stats and quick actions
-    patients.php       Patient admission and treatment assignment
-    doctors.php        Doctor records, experience, and performance reviews
-    consultants.php    Consultant promotion and team management
-    wards.php          Ward and care unit browser
-    complaints.php     Complaint registration and assignment
-    treatments.php     Treatment management and discharge
-    queries.php        16 analytical reports
-    db.php             SQL Server connection and shared helpers
-    nav.php            Shared navigation header included by all pages
-    style.css          Application-wide stylesheet
-    schema.sql         Full database schema with seed data
+```bash
+git clone https://github.com/bilalxfaisal/Hospital-System.git
+cd Hospital-System
 ```
 
----
+Run the schema against your SQL Server instance:
 
-## Setup
-
-1. Install PHP 7.4 or later with the sqlsrv extension enabled.
-
-2. Place the project files in your web server root (for example htdocs for Apache or www for IIS).
-
-3. Create the database and load the schema:
-
-```
+```bash
 sqlcmd -S your_server -i schema.sql
 ```
 
-Or run schema.sql through SQL Server Management Studio.
-
-4. Edit db.php to match your SQL Server instance name and credentials:
+Edit `db.php` with your SQL Server credentials:
 
 ```php
-$serverName       = "YOUR_SERVER\\SQLEXPRESS";
+$serverName        = "YOUR_SERVER\\SQLEXPRESS";
 $connectionOptions = [
     "Database" => "ipmhDB",
     "Uid"      => "",
@@ -109,21 +119,27 @@ $connectionOptions = [
 ];
 ```
 
-Windows Authentication (blank Uid and PWD) is used by default.
-
-5. Open index.php in your browser to reach the dashboard.
+Place the project in your web server root and open `index.php` in your browser.
 
 ---
 
-## Requirements
+## Built With
 
-- PHP 7.4 or later
-- PHP sqlsrv and pdo_sqlsrv extensions
-- Microsoft SQL Server (local or remote)
-- A web server such as Apache, IIS, or the PHP built-in development server
+- **[PHP 7.4+](https://www.php.net/)** — Backend with sqlsrv extension
+- **[Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server)** — Relational database
+- **HTML and CSS** — Frontend with no external frameworks or libraries
 
 ---
 
 ## LinkedIn
 
-https://www.linkedin.com/posts/bilal-faisal-6b7b7b328_dbms-databasedesign-database-ugcPost-7462176555277135872-rnmz/
+https://www.linkedin.com/posts/bilal-faisal-6b7b7b328_dbms-databasedesign-database-activity-7462176695224016896-79lh/
+
+---
+
+<div align="center">
+
+*Built as a collaborative team project demonstrating full-stack database application development,*
+*relational schema design, and analytical SQL.*
+
+</div>
