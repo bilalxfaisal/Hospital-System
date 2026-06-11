@@ -24,7 +24,7 @@
 
 The dashboard serves as the central hub with live statistics across the entire hospital. Every section handles a dedicated area of operations, from patient admissions to staff management to analytical reporting.
 
-> Built as a team project by 3 contributors as part of a Database Management Systems course at FAST NUCES Islamabad.
+> Built as a team project by 4 contributors as part of a Database Management Systems course at FAST NUCES Islamabad.
 
 ---
 
